@@ -2,7 +2,6 @@ import React from "react";
 
 // import "components/DayList.scss";
 import DayListItem from "components/DayListItem";
-import { action } from "@storybook/addon-actions";
 
 // const classNames = require('classnames');
 
