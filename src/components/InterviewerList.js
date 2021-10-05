@@ -1,6 +1,5 @@
 import React from "react";
 import "components/InterviewerList.scss";
-import DayListItem from "./DayListItem";
 import InterviewerListItem from "./InterviewerListItem";
 // const classNames = require('classnames');
 

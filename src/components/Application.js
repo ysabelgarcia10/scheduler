@@ -32,11 +32,27 @@ function Application(props) {
 
   //adding an appointment
   function bookInterview(id, interview) {
-    console.log(id, interview);
+    
+    console.log("inside bookInterview fn in applicaton", id, interview);
+
+    const appointment = {
+      ...state.appointments[id],
+      interview: { ...interview }
+    };
+
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+    
+    return axios.put(`/api/appointments/${id}`, appointment)
+    .then(() => {
+      setState({
+        ...state,
+        appointments
+      });
+    })
   };
-
-
-
 
 
   //<-------- populating the appointment componenet--------->

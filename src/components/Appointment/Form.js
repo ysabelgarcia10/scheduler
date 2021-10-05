@@ -16,8 +16,9 @@ function Form(props) {
     props.onCancel();
   };
 
-  const validate = () => {
+  const toSave = () => {
     props.onSave(name, interviewer)
+    console.log("validating inside forms")
   }
 
   return (
@@ -42,7 +43,7 @@ function Form(props) {
       <section className="appointment__card-right">
         <section className="appointment__actions">
           <Button danger onClick={cancel}>Cancel</Button>
-          <Button confirm onClick={validate}>Save</Button>
+          <Button confirm onClick={toSave}>Save</Button>
         </section>
       </section>
     </main>

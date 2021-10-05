@@ -23,6 +23,9 @@ function Appointment(props) {
     };
 
     props.bookInterview(props.id, interview)
+    .then(() => {
+      transition(SHOW);
+    })
   };
 
   return (
