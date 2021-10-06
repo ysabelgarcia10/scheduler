@@ -54,6 +54,28 @@ function Application(props) {
     })
   };
 
+  //deleting an appointment
+  function cancelInterview(id, interview) {
+    console.log("DELETING", id, interview)
+
+    const appointment = {
+      ...state.appointments[id],
+      interview: {},
+    };
+    
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment,
+    };
+
+    return axios.delete(`/api/appointments/${id}`)
+    .then(() => {
+      setState({
+        ...state,
+        appointments
+      });
+    });
+  }
 
   //<-------- populating the appointment componenet--------->
   const dailyAppointments = getAppointmentsForDay(state, state.day);
@@ -69,7 +91,7 @@ function Application(props) {
         interview={interview}
         interviewers={dailyInterviewers}
         bookInterview={bookInterview}
-        // cancelInterview={cancelInterview}
+        cancelInterview={cancelInterview}
       />
     )
   })
