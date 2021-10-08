@@ -13,8 +13,6 @@ export function useVisualMode(initial) {
     } else {
       setHistory([...history, newMode])
     };
-
-    console.log("Transition", history);
   }
 
   function back() { 
@@ -28,7 +26,6 @@ export function useVisualMode(initial) {
       
       setHistory(newHistory);
     })
-    console.log("BACK", history)
   }
 
   // const current = history[history.length - 1];
