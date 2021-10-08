@@ -17,21 +17,12 @@ function Form(props) {
     props.onCancel();
   };
 
-  // const toSave = () => {
-  //   props.onSave(name, interviewer)
-  //   console.log("validating inside forms")
-  // }
-
   function validate() {
     if (name === "") {
       setError("Student name cannot be blank");
       return;
     }
 
-    // if (!interviewer) {
-    //   setError("Interviewer name cannot be blank");
-    //   return;
-    // }
     setError("");
     props.onSave(name, interviewer);
   }

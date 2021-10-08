@@ -15,22 +15,6 @@ export function useVisualMode(initial) {
     };
 
     console.log("Transition", history);
-    // setHistory((prev) => {
-    //   let newHistory =[];
-    //   // WHY IS SETMODE NOT WORKING? ... :'(
-    //   setMode(newMode); //WHY CANT IT RUN PROPERLY WITH OR WITHOUT THIS?
-    //   console.log("history", history)
-    //   console.log("mode", mode, "newMode", newMode)
-      
-    //   if (replace) {
-    //     newHistory = [...prev]
-    //     newHistory[newHistory.length - 1] = newMode;
-    //     setHistory(newHistory);
-    //   } else {
-    //     newHistory = [...prev, newMode];
-    //     setHistory(newHistory);
-    //   };
-    // })
   }
 
   function back() { 
@@ -46,7 +30,6 @@ export function useVisualMode(initial) {
     })
     console.log("BACK", history)
   }
-
 
   // const current = history[history.length - 1];
   return {mode, transition, back};
