@@ -3,6 +3,14 @@
 React application that allows users to book and cancel interviews. it combines a concise API with a WebSocket server to build a realtime experience.
 
 ## Final Product
+![Scheduler Landing Page]("https://github.com/ysabelgarcia10/scheduler/blob/master/public/images/form-landing-page.png")
+![Create an Appointment/Edit Interview]("https://github.com/ysabelgarcia10/scheduler/blob/master/public/images/form-test-or-create.png")
+![Delete an Interview]("https://github.com/ysabelgarcia10/scheduler/blob/master/public/images/form-delete.png")
+![Validation Message/Status/Error Handling]("https://github.com/ysabelgarcia10/scheduler/blob/master/public/images/messages-validation-status-error-handling.png")
+![Test - Jest]("https://github.com/ysabelgarcia10/scheduler/blob/master/public/images/test-jest.png")
+![Test - Test Coverage]("https://github.com/ysabelgarcia10/scheduler/blob/master/public/images/test-coverage.png)
+![Test - Storybook]("https://github.com/ysabelgarcia10/scheduler/blob/master/public/images/test-storybook.png")
+![Test - Cypress]("https://github.com/ysabelgarcia10/scheduler/blob/master/public/images/test-cypress.png)
 
 # Getting Started
 
