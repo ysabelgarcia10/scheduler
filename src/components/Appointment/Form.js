@@ -23,6 +23,11 @@ function Form(props) {
       return;
     }
 
+    if (!interviewer) {
+      setError("Interviewer name cannot be blank");
+      return;
+    }
+
     setError("");
     props.onSave(name, interviewer);
   }
