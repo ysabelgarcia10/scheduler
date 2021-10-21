@@ -24,6 +24,8 @@ const ERROR_DELETE = "ERROR_DELETE";
 
 function Appointment(props) {
   const {mode, transition, back} = useVisualMode(props.interview ? SHOW : EMPTY);
+  // console.log("--------------")
+  // console.log("mode", mode)
 
   function save(name, interviewer) {
     const interview = {
@@ -39,7 +41,7 @@ function Appointment(props) {
   };
 
   function deleteInterview(id) {
-    transition(DELETING);
+    transition(DELETING, true);
 
     props.cancelInterview(props.id)
     .then(() => transition(EMPTY))
